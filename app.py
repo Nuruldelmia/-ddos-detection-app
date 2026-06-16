@@ -9,9 +9,9 @@ from sklearn.metrics import confusion_matrix, classification_report, cohen_kappa
 from sklearn.decomposition import PCA
 
 # Load models
-scaler = joblib.load('/content/drive/MyDrive/FYP/scaler.pkl')
-pca = joblib.load('/content/drive/MyDrive/FYP/pca.pkl')
-model = joblib.load('/content/drive/MyDrive/FYP/xgb_model.pkl')
+scaler = joblib.load('scaler.pkl')
+pca = joblib.load('pca.pkl')
+model = joblib.load('xgb_model.pkl')
 
 # Page config
 st.set_page_config(page_title="DDoS Attack Detector", page_icon="🛡️", layout="wide")
@@ -140,17 +140,17 @@ with tab2:
     # Step 2
     st.markdown("### Step 2 — Covariance Matrix")
     st.info("Measures how features vary together. Result: 46×46 matrix.")
-    st.image('/content/drive/MyDrive/FYP/step2_covariance.png')
+    st.image('step2_covariance.png')
 
     # Step 3
     st.markdown("### Step 3 — Eigenvalues & Eigenvectors")
     st.info("Eigenvalues show importance of each direction. Sorted from largest to smallest.")
-    st.image('/content/drive/MyDrive/FYP/step3_eigenvalues.png')
+    st.image('step3_eigenvalues.png')
 
     # Step 4
     st.markdown("### Step 4 — Select Components at 95% Variance")
     st.info("19 components needed to explain 95.2% of total variance.")
-    st.image('/content/drive/MyDrive/FYP/step4_variance.png')
+    st.image('step4_variance.png')
 
     # Step 5 — Why 19 table
     st.markdown("### Step 5 — Why 19 Components?")
